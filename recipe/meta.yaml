@@ -1,6 +1,6 @@
 {% set name = "grpc-google-iam-v1" %}
 {% set version = "0.11.4" %}
-{% set data = load_setup_py_data() %}
+
 package:
   name: {{ name|lower }}
   version: {{ version }}
@@ -39,10 +39,10 @@ test:
     - grpc
 
 about:
-  home: {{ data.get('url') }}
-  license: {{ data.get('license') }}
+  home: https://github.com/googleapis/googleapis
+  license: Apache 2.0
   license_family: APACHE
-  summary: {{ data.get('description') }}
+  summary: 'GRPC library for the google-iam-v1 service'
 
   description: |
     grpc-google-iam-v1 is the IDL-derived library for the
