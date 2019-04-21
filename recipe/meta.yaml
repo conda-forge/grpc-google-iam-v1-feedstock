@@ -1,6 +1,6 @@
 {% set name = "grpc-google-iam-v1" %}
 {% set version = "0.11.4" %}
-
+{% set data = load_setup_py_data() %}
 package:
   name: {{ name|lower }}
   version: {{ version }}
@@ -16,12 +16,11 @@ build:
 
 requirements:
   host:
-    - python >=2.7,!=3.0.*,!=3.1.*,!=3.2.*,!=3.3.*
-    - pip
+    - python
+    - pip >=18.1
+    - googleapis-common-protos-grpc >=1.5.2,<2.0.0dev
   run:
-    - python >=2.7,!=3.0.*,!=3.1.*,!=3.2.*,!=3.3.*
-    - googleapis-common-protos >=1.5.2,<2.0.0dev
-    - grpcio >=1.0.0
+    - {{ pin_compatible('googleapis-common-protos-grpc') }}
 
 test:
   imports:
@@ -40,9 +39,10 @@ test:
     - grpc
 
 about:
-  home: https://github.com/googleapis/googleapis
-  license: Apache 2.0
-  summary: 'GRPC library for the google-iam-v1 service'
+  home: {{ data.get('url') }}
+  license: {{ data.get('license') }}
+  license_family: APACHE
+  summary: {{ data.get('description') }}
 
   description: |
     grpc-google-iam-v1 is the IDL-derived library for the
