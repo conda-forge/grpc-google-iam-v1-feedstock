@@ -10,7 +10,7 @@ Feedstock license: BSD 3-Clause
 Summary: GRPC library for the google-iam-v1 service
 
 grpc-google-iam-v1 is the IDL-derived library for the
-google-iam (v1) service in the googleapis repository.
+google-iam v1 service in the googleapis repository.
 
 
 Current build status
