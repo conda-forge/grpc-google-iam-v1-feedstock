@@ -11,16 +11,18 @@ source:
 
 build:
   noarch: python
-  number: 0
-  script: "{{ PYTHON }} -m pip install . --no-deps  --ignore-installed --verbose"
+  number: 1
+  script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed --verbose"
+  skip: True  # [win and vc<14]
 
 requirements:
   host:
-    - python >=2.7
+    - python
     - pip >=18.1
     - googleapis-common-protos-grpc >=1.5.9
   run:
-    - googleapis-common-protos-grpc
+    - python
+    - {{ pin_compatible('googleapis-common-protos-grpc') }}
 
 test:
   imports:
@@ -45,8 +47,7 @@ about:
   summary: 'GRPC library for the google-iam-v1 service'
   description: |
     grpc-google-iam-v1 is the IDL-derived library for the
-    google-iam (v1) service in the googleapis repository.
-
+    google-iam v1 service in the googleapis repository.
 
   doc_url: https://github.com/googleapis/googleapis
   dev_url: https://github.com/googleapis/googleapis/tree/master/google/iam/v1
