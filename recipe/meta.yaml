@@ -10,7 +10,6 @@ source:
   sha256: 5009e831dcec22f3ff00e89405249d6a838d1449a46ac8224907aa5b0e0b1aec
 
 build:
-  noarch: python
   number: 1
   script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed --verbose"
   skip: True  # [win and vc<14]
