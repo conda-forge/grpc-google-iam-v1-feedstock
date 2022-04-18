@@ -21,9 +21,9 @@ requirements:
   host:
     - python
     - pip
-    - googleapis-common-protos-grpc >=1.5.2,<2.0.0dev
+    - googleapis-common-protos-grpc >=1.56.0, <2.0.0dev
     - grpcio >=1.0.0,<2.0.0dev
-  run:
+run:
     - python
     - {{ pin_compatible('googleapis-common-protos-grpc') }}
     - grpcio >=1.0.0,<2.0.0dev
