@@ -10,9 +10,9 @@ source:
   sha256: 0bfb5b56f648f457021a91c0df0db4934b6e0c300bd0f2de2333383fe958aa72
 
 build:
-  number: 3
-  script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed --verbose"
-  skip: True  # [win and vc<14]
+  number: 4
+  script: {{ PYTHON }} -m pip install . --no-deps --ignore-installed --verbose
+  skip: true  # [win and vc<14]
 
 requirements:
   build:
@@ -20,11 +20,13 @@ requirements:
     - cross-python_{{ target_platform }}     # [build_platform != target_platform]
   host:
     - python
-    - pip >=18.1
-    - googleapis-common-protos-grpc >=1.5.9
+    - pip
+    - googleapis-common-protos-grpc >=1.5.2,<2.0.0dev
+    - grpcio >=1.0.0,<2.0.0dev
   run:
     - python
     - {{ pin_compatible('googleapis-common-protos-grpc') }}
+    - grpcio >=1.0.0,<2.0.0dev
 
 test:
   imports:
@@ -47,7 +49,7 @@ about:
   license: Apache-2.0
   license_file: LICENSE
   license_family: APACHE
-  summary: 'GRPC library for the google-iam-v1 service'
+  summary: GRPC library for the google-iam-v1 service
   description: |
     grpc-google-iam-v1 is the IDL-derived library for the
     google-iam v1 service in the googleapis repository.
@@ -58,3 +60,4 @@ about:
 extra:
   recipe-maintainers:
     - BrentDorsey
+    - xylar
