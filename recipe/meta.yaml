@@ -12,38 +12,29 @@ source:
 build:
   number: 0
   script: {{ PYTHON }} -m pip install . --no-deps --ignore-installed --verbose
-  skip: true  # [win and vc<14]
+  noarch: python
 
 requirements:
-  build:
-    - python                                 # [build_platform != target_platform]
-    - cross-python_{{ target_platform }}     # [build_platform != target_platform]
   host:
-    - python
+    - python >=3.7
     - pip
-    - googleapis-common-protos-grpc >=1.56.0, <2.0.0dev
-    - grpcio >=1.44.0,<2.0.0dev
   run:
-    - python
-    - {{ pin_compatible('googleapis-common-protos-grpc') }}
+    - python >=3.7
+    - googleapis-common-protos-grpc >=1.56.0, <2.0.0dev
     - grpcio >=1.44.0,<2.0.0dev
     - protobuf >=3.19.5,<5.0.0dev,!=3.20.0,!=3.20.1,!=4.21.1,!=4.21.2,!=4.21.3,!=4.21.4,!=4.21.5
 
 test:
+  requires:
+    - pip
   imports:
-    - google.api
-    - google.iam
     - google.iam.v1
     - google.iam.v1.iam_policy_pb2
     - google.iam.v1.logging
     - google.iam.v1.logging.audit_data_pb2
     - google.iam.v1.policy_pb2
-    - google.protobuf
-    - google.rpc
-    - google.rpc.code_pb2
-    - google.rpc.error_details_pb2
-    - google.rpc.status_pb2
-    - grpc
+  commands:
+    - pip check
 
 about:
   home: https://github.com/googleapis/googleapis
