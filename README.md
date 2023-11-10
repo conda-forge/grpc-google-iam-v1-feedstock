@@ -1,11 +1,11 @@
-About grpc-google-iam-v1
-========================
+About grpc-google-iam-v1-feedstock
+==================================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/grpc-google-iam-v1-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/googleapis/googleapis
 
 Package license: Apache-2.0
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/grpc-google-iam-v1-feedstock/blob/main/LICENSE.txt)
 
 Summary: GRPC library for the google-iam-v1 service
 
