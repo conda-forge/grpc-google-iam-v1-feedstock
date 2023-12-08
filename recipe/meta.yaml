@@ -1,5 +1,5 @@
 {% set name = "grpc-google-iam-v1" %}
-{% set version = "0.12.6" %}
+{% set version = "0.13.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,10 +7,10 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/grpc-google-iam-v1-{{ version }}.tar.gz
-  sha256: 2bc4b8fdf22115a65d751c9317329322602c39b7c86a289c9b72d228d960ef5f
+  sha256: fad318608b9e093258fbf12529180f400d1c44453698a33509cc6ecf005b294e
 
 build:
-  number: 1
+  number: 0
   script: {{ PYTHON }} -m pip install . --no-deps --ignore-installed --verbose
   noarch: python
 
