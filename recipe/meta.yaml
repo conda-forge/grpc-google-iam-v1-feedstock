@@ -1,5 +1,5 @@
 {% set name = "grpc-google-iam-v1" %}
-{% set version = "0.13.0" %}
+{% set version = "0.13.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/grpc-google-iam-v1-{{ version }}.tar.gz
-  sha256: fad318608b9e093258fbf12529180f400d1c44453698a33509cc6ecf005b294e
+  sha256: 3ff4b2fd9d990965e410965253c0da6f66205d5a8291c4c31c6ebecca18a9001
 
 build:
   number: 0
@@ -20,9 +20,10 @@ requirements:
     - pip
   run:
     - python >=3.7
-    - googleapis-common-protos-grpc >=1.56.0, <2.0.0dev
+    - googleapis-common-protos >=1.56.0,<2.0.0dev
+    - googleapis-common-protos-grpc
     - grpcio >=1.44.0,<2.0.0dev
-    - protobuf >=3.19.5,<5.0.0dev,!=3.20.0,!=3.20.1,!=4.21.1,!=4.21.2,!=4.21.3,!=4.21.4,!=4.21.5
+    - protobuf >=3.20.2,<6.0.0dev,!=4.21.1,!=4.21.2,!=4.21.3,!=4.21.4,!=4.21.5
 
 test:
   requires:
