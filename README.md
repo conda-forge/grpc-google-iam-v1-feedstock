@@ -3,15 +3,15 @@ About grpc-google-iam-v1-feedstock
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/grpc-google-iam-v1-feedstock/blob/main/LICENSE.txt)
 
-Home: https://github.com/googleapis/googleapis
+Home: https://github.com/googleapis/google-cloud-python/tree/main/packages/grpc-google-iam-v1
 
 Package license: Apache-2.0
 
 Summary: GRPC library for the google-iam-v1 service
 
-Development: https://github.com/googleapis/googleapis/tree/master/google/iam/v1
+Development: https://github.com/googleapis/google-cloud-python/tree/main/packages/grpc-google-iam-v1
 
-Documentation: https://github.com/googleapis/googleapis
+Documentation: https://github.com/googleapis/google-cloud-python/blob/main/packages/grpc-google-iam-v1/README.rst
 
 grpc-google-iam-v1 is the IDL-derived library for the
 google-iam v1 service in the googleapis repository.
