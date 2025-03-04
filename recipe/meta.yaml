@@ -40,7 +40,7 @@ test:
     - pip check
 
 about:
-  home: https://github.com/googleapis/googleapis
+  home: https://github.com/googleapis/google-cloud-python/tree/main/packages/grpc-google-iam-v1
   license: Apache-2.0
   license_file: LICENSE
   license_family: APACHE
@@ -49,8 +49,8 @@ about:
     grpc-google-iam-v1 is the IDL-derived library for the
     google-iam v1 service in the googleapis repository.
 
-  doc_url: https://github.com/googleapis/googleapis
-  dev_url: https://github.com/googleapis/googleapis/tree/master/google/iam/v1
+  doc_url: https://github.com/googleapis/google-cloud-python/blob/main/packages/grpc-google-iam-v1/README.rst
+  dev_url: https://github.com/googleapis/google-cloud-python/tree/main/packages/grpc-google-iam-v1
 
 extra:
   recipe-maintainers:
