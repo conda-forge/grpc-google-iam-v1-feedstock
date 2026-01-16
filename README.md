@@ -16,7 +16,6 @@ Documentation: https://github.com/googleapis/google-cloud-python/blob/main/packa
 grpc-google-iam-v1 is the IDL-derived library for the
 google-iam v1 service in the googleapis repository.
 
-
 Current build status
 ====================
 
