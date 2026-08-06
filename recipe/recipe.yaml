@@ -24,10 +24,10 @@ requirements:
     - setuptools
   run:
     - python >=${{ python_min }}
-    - grpcio >=1.44.0,<2.0.0
+    - grpcio >=1.59.0,<2.0.0
     - googleapis-common-protos >=1.63.2,<2.0.0
     - googleapis-common-protos-grpc
-    - protobuf >=4.25.8,<8.0.0
+    - protobuf >=6.33.5,<8.0.0
 tests:
   - python:
       imports:
