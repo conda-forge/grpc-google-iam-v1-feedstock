@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: grpc-google-iam-v1
-  version: 0.14.4
+  version: "0.14.5"
 
 package:
   name: ${{ name|lower }}
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/grpc_google_iam_v1-${{ version }}.tar.gz
-  sha256: 392b3796947ed6334e61171d9ab06bf7eb357f554e5fc7556ad7aab6d0e17038
+  sha256: 07fd3a9fafb586588e771831fbfc8f6597050181d0c3b45e039d18b8fdc1aab5
 
 build:
   number: 0
@@ -24,10 +24,10 @@ requirements:
     - setuptools
   run:
     - python >=${{ python_min }}
-    - grpcio >=1.44.0,<2.0.0
+    - grpcio >=1.59.0,<2.0.0
     - googleapis-common-protos >=1.63.2,<2.0.0
     - googleapis-common-protos-grpc
-    - protobuf >=4.25.8,<8.0.0
+    - protobuf >=6.33.5,<8.0.0
 tests:
   - python:
       imports:
@@ -36,7 +36,9 @@ tests:
         - google.iam.v1.logging
         - google.iam.v1.logging.audit_data_pb2
         - google.iam.v1.policy_pb2
-      python_version: ${{ python_min }}.*
+      python_version:
+        - ${{ python_min }}.*
+        - "*"
   - requirements:
       run:
         - pip
