@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: grpc-google-iam-v1
-  version: "0.14.5"
+  version: "0.14.6"
 
 package:
   name: ${{ name|lower }}
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/grpc_google_iam_v1-${{ version }}.tar.gz
-  sha256: 07fd3a9fafb586588e771831fbfc8f6597050181d0c3b45e039d18b8fdc1aab5
+  sha256: fc0a683ace0a149184fcd08d667dd64d51ae65e5698e86f7136aa6002a8b5373
 
 build:
   number: 0
